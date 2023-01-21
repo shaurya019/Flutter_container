@@ -46,13 +46,18 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        // body:Image.asset('assets/images/logo.png')
-        body: OutlinedButton(
-          child:Text('Click Me'),
-          onPressed: (){
-            print('Outlined Button');
-          },
-        )
+        body:Center(
+      child:Container(
+          width:300,
+          height:300,
+          child:Image.asset('assets/images/logo.png')
+    ),)
+        // body: OutlinedButton(
+        //   child:Text('Click Me'),
+        //   onPressed: (){
+        //     print('Outlined Button');
+        //   },
+        // )
     // body: ElevatedButton(
     //     child:Text('Click'),
     //   onPressed: (){
