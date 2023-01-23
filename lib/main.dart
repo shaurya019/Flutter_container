@@ -46,28 +46,33 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Container(
-          height: 300,
-            width:300,
+        body:
+        Container(
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children:[
-                Text('A' , style: TextStyle(fontSize: 25),),
-                Text('B' , style: TextStyle(fontSize: 25),),
-                Text('C' , style: TextStyle(fontSize: 25),),
-                Text('D' , style: TextStyle(fontSize: 25),),
-                Text('E' , style: TextStyle(fontSize: 25),),
-                ElevatedButton(
-                child:Text('Click'),
-                onPressed: (){
-                  print('Elevated Button');
-                },
-                )
-              ]
-          )
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+                Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children:[
+                  Text('R1' , style: TextStyle(fontSize: 25),),
+                  Text('R2' , style: TextStyle(fontSize: 25),),
+                  Text('R3' , style: TextStyle(fontSize: 25),),
+                  Text('R4' , style: TextStyle(fontSize: 25),),
+                  Text('R5' , style: TextStyle(fontSize: 25),),
+                ],
+            ),
+              Text('A' , style: TextStyle(fontSize: 25),),
+          Text('B' , style: TextStyle(fontSize: 25),),
+          Text('C' , style: TextStyle(fontSize: 25),),
+          Text('D' , style: TextStyle(fontSize: 25),),
+          Text('E' , style: TextStyle(fontSize: 25),),
+              ],
+    )
         )
-
+    );
+  }
+}
 
     //     body:Center(
     //   child:Container(
@@ -114,6 +119,4 @@ class _MyHomePageState extends State<MyHomePage> {
       // )
 
 
-    );
-  }
-}
+
