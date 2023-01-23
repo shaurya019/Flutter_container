@@ -46,116 +46,159 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Padding(
-          padding: const EdgeInsets.all(8.0),
-            child:SingleChildScrollView(
-        child: Column(
+        body:ListView(
+          scrollDirection: Axis.horizontal,
+          reverse: true,
           children: [
         Padding(
-        padding: const EdgeInsets.only(bottom: 11),
-          child:SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-                children:[
-                  Container(
-                    margin: EdgeInsets.only(right: 11),
-                    height: 200,
-                    width: 200,
-                    color: Colors.amberAccent,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(right: 11),
-                    height: 200,
-                    width: 200,
-                    color: Colors.blue,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(right: 11),
-                    height: 200,
-                    width: 200,
-                    color: Colors.black38,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(right: 11),
-                    height: 200,
-                    width: 200,
-                    color: Colors.deepPurpleAccent,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(right: 11),
-                    height: 200,
-                    width: 200,
-                    color: Colors.amberAccent,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(right: 11),
-                    height: 200,
-                    width: 200,
-                    color: Colors.blue,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(right: 11),
-                    height: 200,
-                    width: 200,
-                    color: Colors.black38,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(right: 11),
-                    height: 200,
-                    width: 200,
-                    color: Colors.deepPurpleAccent,
-                  ),
-                ],
-            ),
-                ),
+        padding: const EdgeInsets.all(8.0),
+            child:Text('1',
+              style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+            )
         ),
-            Container(
-              margin: EdgeInsets.only(bottom: 11),
-              height: 200,
-              color: Colors.amberAccent,
+
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:Text('2',
+                  style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+                )
             ),
-            Container(
-              margin: EdgeInsets.only(bottom: 11),
-              height: 200,
-              color: Colors.blue,
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:Text('3',
+                  style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+                )
             ),
-            Container(
-              margin: EdgeInsets.only(bottom: 11),
-              height: 200,
-              color: Colors.black38,
+
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:Text('4',
+                  style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+                )
             ),
-            Container(
-              margin: EdgeInsets.only(bottom: 11),
-              height: 200,
-              color: Colors.deepPurpleAccent,
-            ),
-            Container(
-              margin: EdgeInsets.only(bottom: 11),
-              height: 200,
-              color: Colors.amberAccent,
-            ),
-            Container(
-              margin: EdgeInsets.only(bottom: 11),
-              height: 200,
-              color: Colors.blue,
-            ),
-            Container(
-              margin: EdgeInsets.only(bottom: 11),
-              height: 200,
-              color: Colors.black38,
-            ),
-            Container(
-              margin: EdgeInsets.only(bottom: 11),
-              height: 200,
-              color: Colors.deepPurpleAccent,
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:Text('5',
+                  style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+                )
             ),
           ],
-        )
-        )
         )
     );
   }
 }
+
+
+
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child:SingleChildScrollView(
+// child: Column(
+// children: [
+// Padding(
+// padding: const EdgeInsets.only(bottom: 11),
+// child:SingleChildScrollView(
+// scrollDirection: Axis.horizontal,
+// child: Row(
+// children:[
+// Container(
+// margin: EdgeInsets.only(right: 11),
+// height: 200,
+// width: 200,
+// color: Colors.amberAccent,
+// ),
+// Container(
+// margin: EdgeInsets.only(right: 11),
+// height: 200,
+// width: 200,
+// color: Colors.blue,
+// ),
+// Container(
+// margin: EdgeInsets.only(right: 11),
+// height: 200,
+// width: 200,
+// color: Colors.black38,
+// ),
+// Container(
+// margin: EdgeInsets.only(right: 11),
+// height: 200,
+// width: 200,
+// color: Colors.deepPurpleAccent,
+// ),
+// Container(
+// margin: EdgeInsets.only(right: 11),
+// height: 200,
+// width: 200,
+// color: Colors.amberAccent,
+// ),
+// Container(
+// margin: EdgeInsets.only(right: 11),
+// height: 200,
+// width: 200,
+// color: Colors.blue,
+// ),
+// Container(
+// margin: EdgeInsets.only(right: 11),
+// height: 200,
+// width: 200,
+// color: Colors.black38,
+// ),
+// Container(
+// margin: EdgeInsets.only(right: 11),
+// height: 200,
+// width: 200,
+// color: Colors.deepPurpleAccent,
+// ),
+// ],
+// ),
+// ),
+// ),
+// Container(
+// margin: EdgeInsets.only(bottom: 11),
+// height: 200,
+// color: Colors.amberAccent,
+// ),
+// Container(
+// margin: EdgeInsets.only(bottom: 11),
+// height: 200,
+// color: Colors.blue,
+// ),
+// Container(
+// margin: EdgeInsets.only(bottom: 11),
+// height: 200,
+// color: Colors.black38,
+// ),
+// Container(
+// margin: EdgeInsets.only(bottom: 11),
+// height: 200,
+// color: Colors.deepPurpleAccent,
+// ),
+// Container(
+// margin: EdgeInsets.only(bottom: 11),
+// height: 200,
+// color: Colors.amberAccent,
+// ),
+// Container(
+// margin: EdgeInsets.only(bottom: 11),
+// height: 200,
+// color: Colors.blue,
+// ),
+// Container(
+// margin: EdgeInsets.only(bottom: 11),
+// height: 200,
+// color: Colors.black38,
+// ),
+// Container(
+// margin: EdgeInsets.only(bottom: 11),
+// height: 200,
+// color: Colors.deepPurpleAccent,
+// ),
+// ],
+// )
+// )
+// )
+//
+//
 
 
 
