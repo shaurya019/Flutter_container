@@ -48,7 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:
+        body:Container(
+          color: Colors.blue,
+          margin: EdgeInsets.all(11),
+          child: Padding(
+            padding: EdgeInsets.all(11),
+              child: Text('Hello Shaurya !!' , style: TextStyle(fontSize: 25,fontWeight: FontWeight.w800,color: Colors.white),)
+          ),
+        )
     );
   }
 }
