@@ -42,52 +42,63 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
+    var arr = ['s' ,'h' ,'a' , 'u' , 'r', 'y', 'a'];
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:ListView(
+        body:ListView.builder(itemBuilder: (context,index){
+          return Text(arr[index], style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),);
+    },
+itemCount: arr.length,
+          itemExtent: 100,
           scrollDirection: Axis.horizontal,
-          reverse: true,
-          children: [
-        Padding(
-        padding: const EdgeInsets.all(8.0),
-            child:Text('1',
-              style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
-            )
-        ),
-
-            Padding(
-                padding: const EdgeInsets.all(8.0),
-                child:Text('2',
-                  style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
-                )
-            ),
-            Padding(
-                padding: const EdgeInsets.all(8.0),
-                child:Text('3',
-                  style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
-                )
-            ),
-
-            Padding(
-                padding: const EdgeInsets.all(8.0),
-                child:Text('4',
-                  style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
-                )
-            ),
-            Padding(
-                padding: const EdgeInsets.all(8.0),
-                child:Text('5',
-                  style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
-                )
-            ),
-          ],
         )
     );
   }
 }
 
+
+
+// ListView(
+// scrollDirection: Axis.horizontal,
+// reverse: true,
+// children: [
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child:Text('1',
+// style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+// )
+// ),
+//
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child:Text('2',
+// style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+// )
+// ),
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child:Text('3',
+// style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+// )
+// ),
+//
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child:Text('4',
+// style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+// )
+// ),
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child:Text('5',
+// style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+// )
+// ),
+// ],
+// )
 
 
 // Padding(
