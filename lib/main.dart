@@ -48,42 +48,43 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body: Row(
-          children: [
-        Expanded(
-          flex:2,
-          child:Container(
-              width: 50,
-              height: 150,
-              color: Colors.blue,
-            ),
-        ),
-            Expanded(
-              flex:4,
-              child:Container(
-              width: 50,
-              height: 150,
-              color: Colors.deepPurpleAccent,
-            ),
-            ),
-            Expanded(child:Container(
-              width: 50,
-              height: 150,
-              color: Colors.amber,
-            ),
-            ),
-            Expanded(child: Container(
-              width: 50,
-              height: 150,
-              color: Colors.deepOrange,
-            ),
-            )
-          ],
-        )
+        body:
     );
   }
 }
 
+//Row(
+//           children: [
+//         Expanded(
+//           flex:2,
+//           child:Container(
+//               width: 50,
+//               height: 150,
+//               color: Colors.blue,
+//             ),
+//         ),
+//             Expanded(
+//               flex:4,
+//               child:Container(
+//               width: 50,
+//               height: 150,
+//               color: Colors.deepPurpleAccent,
+//             ),
+//             ),
+//             Expanded(child:Container(
+//               width: 50,
+//               height: 150,
+//               color: Colors.amber,
+//             ),
+//             ),
+//             Expanded(child: Container(
+//               width: 50,
+//               height: 150,
+//               color: Colors.deepOrange,
+//             ),
+//             )
+//           ],
+//         )
 
 //Container(
 //           width: double.infinity,
