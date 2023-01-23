@@ -46,24 +46,54 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Center(
-      child:Container(
-          width:300,
-          height:300,
-          child:Image.asset('assets/images/logo.png')
-    ),)
+        body:Container(
+          height: 300,
+            width:300,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children:[
+                Text('A' , style: TextStyle(fontSize: 25),),
+                Text('B' , style: TextStyle(fontSize: 25),),
+                Text('C' , style: TextStyle(fontSize: 25),),
+                Text('D' , style: TextStyle(fontSize: 25),),
+                Text('E' , style: TextStyle(fontSize: 25),),
+                ElevatedButton(
+                child:Text('Click'),
+                onPressed: (){
+                  print('Elevated Button');
+                },
+                )
+              ]
+          )
+        )
+
+
+    //     body:Center(
+    //   child:Container(
+    //       width:300,
+    //       height:300,
+    //       child:Image.asset('assets/images/logo.png')
+    // ),)
+
+
         // body: OutlinedButton(
         //   child:Text('Click Me'),
         //   onPressed: (){
         //     print('Outlined Button');
         //   },
         // )
+
+
     // body: ElevatedButton(
     //     child:Text('Click'),
     //   onPressed: (){
     //   print('Elevated Button');
     //   },
     // )
+
+
+
     //   body: TextButton(
     //   child:Text('Click Me'),
     // onPressed: (){
@@ -72,6 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // onLongPress: (){
     // print('Pratap');
     // },
+
+
       // body:Center(
       //   child:Container(
       //       width:300,
@@ -80,6 +112,8 @@ class _MyHomePageState extends State<MyHomePage> {
       //       child:Center( child: Text('Hello Shaurya',style: TextStyle(fontSize: 35),),)
       //   ),
       // )
+
+
     );
   }
 }
