@@ -46,28 +46,148 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Center(
-          child:InkWell(
-            onTap: (){
-              print('onTap');
-            },
-              onDoubleTap:  (){
-                print('onDoubleTap');
-              },
-              onLongPress:  (){
-                print('onLongPress');
-              },
-          child:Container(
-            width: 100,
-            height: 100,
-            color: Colors.indigo,
-          )
-          )
+        body:Padding(
+          padding: const EdgeInsets.all(8.0),
+            child:SingleChildScrollView(
+        child: Column(
+          children: [
+        Padding(
+        padding: const EdgeInsets.only(bottom: 11),
+          child:SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+                children:[
+                  Container(
+                    margin: EdgeInsets.only(right: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.amberAccent,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.blue,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.black38,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.deepPurpleAccent,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.amberAccent,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.blue,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.black38,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 11),
+                    height: 200,
+                    width: 200,
+                    color: Colors.deepPurpleAccent,
+                  ),
+                ],
+            ),
+                ),
+        ),
+            Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.amberAccent,
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.blue,
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.deepPurpleAccent,
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.amberAccent,
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.blue,
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.black38,
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 11),
+              height: 200,
+              color: Colors.deepPurpleAccent,
+            ),
+          ],
         )
-
+        )
+        )
     );
   }
 }
+
+
+
+// Center(
+// child:InkWell(
+// onTap: (){
+// print('onTap');
+// },
+// // onDoubleTap:  (){
+// //   print('onDoubleTap');
+// // },
+// // onLongPress:  (){
+// //   print('onLongPress');
+// // },
+// child:Container(
+// width: 300,
+// height: 300,
+// color: Colors.amberAccent,
+// child: Center(
+// child:InkWell(
+// onTap: (){
+// print('Button');
+// },
+// child:Text('CLick Me',
+// style:TextStyle(fontSize: 21,fontWeight: FontWeight.w700),
+// )
+// ),
+// )
+// )
+// )
+// )
+
 
 
 // Container(
