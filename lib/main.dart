@@ -48,35 +48,69 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Container(
-          width: double.infinity,
-          height: double.infinity,
-          // color: Colors.cyan,
-          child: Center(
+        body: Row(
+          children: [
+        Expanded(
+          flex:2,
+          child:Container(
+              width: 50,
+              height: 150,
+              color: Colors.blue,
+            ),
+        ),
+            Expanded(
+              flex:4,
               child:Container(
-                width: 150,
-                height: 150,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(21),
-border: Border.all(
-  width: 2,
-    color: Colors.black,
-),
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 51,
-                      color: Colors.grey,
-                      spreadRadius: 21
-                    )
-                  ]
-                )
-              )
-          ),
+              width: 50,
+              height: 150,
+              color: Colors.deepPurpleAccent,
+            ),
+            ),
+            Expanded(child:Container(
+              width: 50,
+              height: 150,
+              color: Colors.amber,
+            ),
+            ),
+            Expanded(child: Container(
+              width: 50,
+              height: 150,
+              color: Colors.deepOrange,
+            ),
+            )
+          ],
         )
     );
   }
 }
+
+
+//Container(
+//           width: double.infinity,
+//           height: double.infinity,
+//           // color: Colors.cyan,
+//           child: Center(
+//               child:Container(
+//                 width: 150,
+//                 height: 150,
+//                 decoration: BoxDecoration(
+//                   color: Colors.blue,
+//                   borderRadius: BorderRadius.circular(21),
+// border: Border.all(
+//   width: 2,
+//     color: Colors.black,
+// ),
+//                   boxShadow: [
+//                     BoxShadow(
+//                       blurRadius: 51,
+//                       color: Colors.grey,
+//                       spreadRadius: 21
+//                     )
+//                   ]
+//                 )
+//               )
+//           ),
+//         )
 
 
 
