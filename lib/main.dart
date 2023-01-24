@@ -48,17 +48,56 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Container(
-          color: Colors.blue,
-          margin: EdgeInsets.all(11),
-          child: Padding(
-            padding: EdgeInsets.all(11),
-              child: Text('Hello Shaurya !!' , style: TextStyle(fontSize: 25,fontWeight: FontWeight.w800,color: Colors.white),)
+        body:Center(
+          child: CircleAvatar(
+              // ignore: sort_child_properties_last
+              child:Container(
+                width: 60,
+              height: 60,
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 40,
+                        height: 40,
+                        child: Image.asset('assets/images/logo.png'),
+                        Text('Name'),
+                      )
+                    ],
+                  )
+              )
+            backgroundColor: Colors.green,
+            maxRadius: 60,
           ),
         )
     );
   }
 }
+
+
+
+
+
+//ListView.separated(itemBuilder: (context,index){
+//           return ListTile(
+//             leading: Text('${index + 1}'),
+//             title: Text(arr[index]),
+//             subtitle: Text('Number'),
+//             trailing: Icon(Icons.add),
+//           );
+//         }, itemCount: arr.length,
+//           separatorBuilder: (context,index){
+//           return Divider(height: 20, thickness: 1,);
+//           },)
+
+
+//Container(
+//           color: Colors.blue,
+//           margin: EdgeInsets.all(11),
+//           child: Padding(
+//             padding: EdgeInsets.all(11),
+//               child: Text('Hello Shaurya !!' , style: TextStyle(fontSize: 25,fontWeight: FontWeight.w800,color: Colors.white),)
+//           ),
+//         )
 
 //Row(
 //           children: [
