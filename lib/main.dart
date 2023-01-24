@@ -1,3 +1,5 @@
+
+import 'package:container/ui_helper/helperfile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +16,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
+        textTheme: TextTheme(
+          headline1:TextStyle(fontSize: 25,fontWeight: FontWeight.w800),
+            headline2:TextStyle(fontSize: 25,fontWeight: FontWeight.w800),
+            subtitle1:TextStyle(fontSize: 15,fontWeight: FontWeight.w600),
+        )
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page')
     );
@@ -48,32 +55,40 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Center(
-          child: CircleAvatar(
-              // ignore: sort_child_properties_last
-              child:Container(
-                width: 60,
-              height: 60,
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 40,
-                        height: 40,
-                        child: Image.asset('assets/images/logo.png'),
-                        Text('Name'),
-                      )
-                    ],
-                  )
-              )
-            backgroundColor: Colors.green,
-            maxRadius: 60,
-          ),
+        body:Column(
+          children: [
+            Text('HELLO 1!', style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.deepOrange),),
+            Text('HELLO 2!', style: Theme.of(context).textTheme.subtitle1,),
+            Text('HELLO 3!', style: Theme.of(context).textTheme.headline2!.copyWith(color: Colors.deepPurpleAccent),),
+            Text('HELLO 4!', style: helpfile11(textColor:Colors.blue),),
+          ],
         )
     );
   }
 }
 
 
+//Center(
+//           child: CircleAvatar(
+//               // ignore: sort_child_properties_last
+//               child:Container(
+//                 width: 60,
+//               height: 60,
+//                   child: Column(
+//                     children: [
+//                       Container(
+//                         width: 40,
+//                         height: 40,
+//                         child: Image.asset('assets/images/logo.png'),
+//                         Text('Name'),
+//                       )
+//                     ],
+//                   )
+//               )
+//             backgroundColor: Colors.green,
+//             maxRadius: 60,
+//           ),
+//         )
 
 
 
