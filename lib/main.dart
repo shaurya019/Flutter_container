@@ -59,23 +59,37 @@ void help(){
       ),
         body:Stack(
           children: [
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.cyan,
-            ),
-            Container(
-              width: 160,
-              height: 160,
-              color: Colors.yellow,
-            ),
+            help1(),
+            help2(),
           ],
         )
     );
   }
 }
 
+class help1 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      width: 200,
+      height: 200,
+      color: Colors.cyan,
+    );
+  }
+}
 
+
+
+class help2 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      width: 160,
+      height: 160,
+      color: Colors.yellow,
+    );
+  }
+}
 
 //ElevatedButton(
 //           child: Text('Click Me'),
