@@ -39,7 +39,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
+void help(){
+  print('Clicked!!');
+}
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -55,7 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:
+        body: ElevatedButton(
+          child: Text('Click Me'),
+          onPressed: help,
+        )
     );
   }
 }
