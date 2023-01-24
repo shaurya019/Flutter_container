@@ -55,18 +55,32 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Column(
-          children: [
-            Text('HELLO 1!', style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.deepOrange),),
-            Text('HELLO 2!', style: Theme.of(context).textTheme.subtitle1,),
-            Text('HELLO 3!', style: Theme.of(context).textTheme.headline2!.copyWith(color: Colors.deepPurpleAccent),),
-            Text('HELLO 4!', style: helpfile11(textColor:Colors.blue),),
-          ],
-        )
+        body:
     );
   }
 }
 
+//Center(
+//           child: Card(
+//             elevation: 11,
+//             child: Padding(
+//               padding: const EdgeInsets.all(8.0),
+//                 child:Text(
+//                   'Hello World!',
+//                   style: TextStyle(fontSize: 25),
+//                 )
+//             ),
+//           ),
+//         )
+
+//Column(
+//           children: [
+//             Text('HELLO 1!', style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.deepOrange),),
+//             Text('HELLO 2!', style: Theme.of(context).textTheme.subtitle1,),
+//             Text('HELLO 3!', style: Theme.of(context).textTheme.headline2!.copyWith(color: Colors.deepPurpleAccent),),
+//             Text('HELLO 4!', style: helpfile11(textColor:Colors.blue),),
+//           ],
+//         )
 
 //Center(
 //           child: CircleAvatar(
