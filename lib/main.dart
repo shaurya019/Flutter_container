@@ -59,15 +59,20 @@ void help(){
         title: Text('Flutter Container'),
       ),
         body:Center(
-          child: Container(
-            width: 150,
-            height: 50,
-            child: RoundButton(
-                btnName:'Login',
-                callback:(){
-                  print('Logged in!!');
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minWidth: 200,
+              minHeight: 200,
+              maxHeight: 500,
+              maxWidth: 500,
+            ),
+            child: SizedBox.shrink(
+              child: ElevatedButton(
+                onPressed: (){
+                  print('hello');
                 },
-                textStyle:helpfile11(),
+                  child:Text('click')
+              ),
             ),
           ),
         )
@@ -75,6 +80,39 @@ void help(){
   }
 }
 
+//Center(
+//           child: ConstrainedBox(
+//             constraints: BoxConstraints(
+//               minWidth: 200,
+//               minHeight: 200,
+//               maxHeight: 500,
+//               maxWidth: 500,
+//             ),
+//             child: SizedBox.shrink(
+//               child: ElevatedButton(
+//                 onPressed: (){
+//                   print('hello');
+//                 },
+//                   child:Text('click')
+//               ),
+//             ),
+//           ),
+//         )
+
+
+//Center(
+//           child: Container(
+//             width: 150,
+//             height: 50,
+//             child: RoundButton(
+//                 btnName:'Login',
+//                 callback:(){
+//                   print('Logged in!!');
+//                 },
+//                 textStyle:helpfile11(),
+//             ),
+//           ),
+//         )
 
 // Stack(
 // children: [
