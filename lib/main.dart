@@ -59,14 +59,8 @@ void help(){
         title: Text('Flutter Container'),
       ),
         body:Center(
-          child: ConstrainedBox(
-            constraints: BoxConstraints(
-              minWidth: 200,
-              minHeight: 200,
-              maxHeight: 500,
-              maxWidth: 500,
-            ),
-            child: SizedBox.shrink(
+            child: SizedBox.square(
+              dimension: 200,
               child: ElevatedButton(
                 onPressed: (){
                   print('hello');
@@ -75,8 +69,7 @@ void help(){
               ),
             ),
           ),
-        )
-    );
+        );
   }
 }
 
