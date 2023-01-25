@@ -60,16 +60,35 @@ void help(){
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:
-        Center(
-          child: FaIcon(
-            FontAwesomeIcons.addressBook , color: Colors.cyan,
+        body:Container(
+          width: 300,
+          height: 500,
+          color: Colors.cyan,
+          child: Stack
+            (
+            children: [
+              Positioned(
+              bottom: 41,
+              right: 41,
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.red,
+          ))
+            ],
           ),
         )
+
         );
   }
 }
 
+
+// Center(
+//           child: FaIcon(
+//             FontAwesomeIcons.addressBook , color: Colors.cyan,
+//           ),
+//         )
 
 //Center(
 //           child: Icon(
