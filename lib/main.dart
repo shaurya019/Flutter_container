@@ -58,20 +58,49 @@ void help(){
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Center(
-            child: SizedBox.square(
-              dimension: 200,
-              child: ElevatedButton(
-                onPressed: (){
-                  print('hello');
-                },
-                  child:Text('click')
-              ),
-            ),
+        body:
+        Center(
+          child: Icon(
+            Icons.add_a_photo,
+            size:50,
+            color: Colors.cyan,
           ),
+        )
         );
   }
 }
+
+
+//RichText(
+//           text: TextSpan(
+//             style: TextStyle(
+//               color: Colors.grey,
+//               fontSize: 21,
+//             ),
+//             children: <TextSpan>[
+//               TextSpan(text: 'Hello'),
+//               TextSpan(text: 'World',style: TextStyle(
+//                 color: Colors.blue,
+//                 fontSize: 34,
+//                 fontWeight: FontWeight.bold
+//               ),),
+//             ]
+//           )
+//         )
+
+
+
+//Center(
+//             child: SizedBox.square(
+//               dimension: 200,
+//               child: ElevatedButton(
+//                 onPressed: (){
+//                   print('hello');
+//                 },
+//                   child:Text('click')
+//               ),
+//             ),
+//           ),
 
 //Center(
 //           child: ConstrainedBox(
