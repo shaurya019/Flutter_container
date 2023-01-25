@@ -2,6 +2,8 @@
 import 'package:container/ui_helper/helperfile.dart';
 import 'package:container/widget/rounded_btn.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -60,16 +62,22 @@ void help(){
       ),
         body:
         Center(
-          child: Icon(
-            Icons.add_a_photo,
-            size:50,
-            color: Colors.cyan,
+          child: FaIcon(
+            FontAwesomeIcons.addressBook , color: Colors.cyan,
           ),
         )
         );
   }
 }
 
+
+//Center(
+//           child: Icon(
+//             Icons.add_a_photo,
+//             size:50,
+//             color: Colors.cyan,
+//           ),
+//         )
 
 //RichText(
 //           text: TextSpan(
