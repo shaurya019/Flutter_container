@@ -1,5 +1,6 @@
 
 import 'package:container/ui_helper/helperfile.dart';
+import 'package:container/widget/rounded_btn.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -57,39 +58,50 @@ void help(){
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-        body:Stack(
-          children: [
-            help1(),
-            help2(),
-          ],
+        body:Center(
+          child: Container(
+            width: 150,
+            height: 50,
+            child: RoundButton(
+                btnName:'Login',
+                callback:(){
+                  print('Logged in!!');
+                },
+                textStyle:helpfile11(),
+            ),
+          ),
         )
     );
   }
 }
 
-class help1 extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return Container(
-      width: 200,
-      height: 200,
-      color: Colors.cyan,
-    );
-  }
-}
 
-
-
-class help2 extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return Container(
-      width: 160,
-      height: 160,
-      color: Colors.yellow,
-    );
-  }
-}
+// Stack(
+// children: [
+// help1(),
+// help2(),
+// ],
+// )
+// class help1 extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return Container(
+//       width: 200,
+//       height: 200,
+//       color: Colors.cyan,
+//     );
+//   }
+// }
+// class help2 extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context){
+//     return Container(
+//       width: 160,
+//       height: 160,
+//       color: Colors.yellow,
+//     );
+//   }
+// }
 
 //ElevatedButton(
 //           child: Text('Click Me'),
