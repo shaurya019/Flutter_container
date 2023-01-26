@@ -4,6 +4,8 @@ import 'package:container/widget/rounded_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'IntroPage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue,
         ),
-        home: SplashScreen(),
+        home: IntroPage(),
         // home: const MyHomePage(title: 'Flutter Demo Home Page')
     );
   }
@@ -29,19 +31,42 @@ class MyApp extends StatelessWidget {
 
 
 class MyHomePage extends StatelessWidget{
-
+var nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-      body:Text('Flutter Container'),
+      body:Center(
+        child: Container
+          (
+          width: 300,
+          child: Column(
+              mainAxisAlignment:MainAxisAlignment.center,
+            children: [
+              Text('Dashboard',style: TextStyle(fontSize: 25),),
+              SizedBox(height: 11),
+              TextField(
+                controller: nameController,
+              ),
+          ElevatedButton(onPressed: (){
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => IntroPage(),));
+          }, child: Text('Next'))
+            ],
+          ),
+        ),
+      )
 
     );
   }
 
 }
+
+
+//Text('Flutter Container'),
+
 // class MyHomePage extends StatefulWidget {
 //   const MyHomePage({super.key, required this.title});
 //

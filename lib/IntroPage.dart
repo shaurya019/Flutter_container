@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'main.dart';
 import 'package:container/main.dart';
 
 class IntroPage extends StatelessWidget {
@@ -9,21 +10,21 @@ class IntroPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('My Intro_Main'),
         ),
-        body:Column(
+        body: Column(
           children: [
             Text('Welcome', style: TextStyle(
                 fontSize: 34,
                 fontWeight: FontWeight.bold
             ),),
             SizedBox(height: 11,),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => myHomePage(),));
+            ElevatedButton(onPressed: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => MyHomePage(),));
             }, child: Text('Next'))
           ],
         )
 
     );
   }
-
 }
 
