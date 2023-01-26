@@ -1,4 +1,4 @@
-
+import 'package:container/splash_screen.dart';
 import 'package:container/ui_helper/helperfile.dart';
 import 'package:container/widget/rounded_btn.dart';
 import 'package:flutter/material.dart';
@@ -16,21 +16,32 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-        textTheme: TextTheme(
-          headline1:TextStyle(fontSize: 25,fontWeight: FontWeight.w800),
-            headline2:TextStyle(fontSize: 25,fontWeight: FontWeight.w800),
-            subtitle1:TextStyle(fontSize: 15,fontWeight: FontWeight.w600),
-        )
-      ),
-      home: MyHomePage()
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            primarySwatch: Colors.blue,
+        ),
+        home: SplashScreen(),
+        // home: const MyHomePage(title: 'Flutter Demo Home Page')
     );
   }
 }
 
+
+class MyHomePage extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Container'),
+      ),
+      body:Text('Flutter Container'),
+
+    );
+  }
+
+}
 // class MyHomePage extends StatefulWidget {
 //   const MyHomePage({super.key, required this.title});
 //
@@ -39,9 +50,9 @@ class MyApp extends StatelessWidget {
 //   @override
 //   State<MyHomePage> createState() => _MyHomePageState();
 // }
-
-
-//class _MyHomePageState extends State<MyHomePage> {
+//
+//
+// class _MyHomePageState extends State<MyHomePage> {
 //   int _counter = 0;
 // void help(){
 //   print('Clicked!!');
@@ -61,44 +72,25 @@ class MyApp extends StatelessWidget {
 //       appBar: AppBar(
 //         title: Text('Flutter Container'),
 //       ),
-//         body:
+//         body:Text('Flutter Container'),
 //
 //         );
 //   }
 // }
 
 
-class MyHomePage extends StatefulWidget{
-  @override
-  State<StatefulWidget> createState() {
-return MyHomeState();
-  }
-
-}
-
-class MyHomeState extends State<MyHomePage>{
-  var count=0;
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text('StateFul'),
-        ),
-        body:ConstrainedBox(
-          constraints: BoxConstraints(
-            maxWidth: 200,
-            maxHeight: 100,
-          ),
-          child: Text('Hello World Hello World Hello World Hello World Hello'),
-            //  fontSize:21,
-            // overflow: TextOverflow.fade
-        ),
-    );
-  }
-
-}
 
 
+
+//ConstrainedBox(
+//           constraints: BoxConstraints(
+//             maxWidth: 200,
+//             maxHeight: 100,
+//           ),
+//           child: Text('Hello World Hello World Hello World Hello World Hello'),
+//             //  fontSize:21,
+//             // overflow: TextOverflow.fade
+//         ),
 
 //Center(
 //           child: Column(
