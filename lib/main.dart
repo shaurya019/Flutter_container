@@ -84,8 +84,15 @@ class MyHomeState extends State<MyHomePage>{
         appBar: AppBar(
           title: Text('StateFul'),
         ),
-        body:
-
+        body:ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: 200,
+            maxHeight: 100,
+          ),
+          child: Text('Hello World Hello World Hello World Hello World Hello'),
+            //  fontSize:21,
+            // overflow: TextOverflow.fade
+        ),
     );
   }
 
