@@ -31,38 +31,48 @@ class MyApp extends StatelessWidget {
 
 
 class MyHomePage extends StatelessWidget{
-var nameController = TextEditingController();
+// var nameController = TextEditingController();
+var arr = [1,2,3,4,5,6,1,2,3,4,5,61,2,3,4,5,61,2,3,4,5,61,2,3,];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-      body:Center(
-        child: Container
-          (
-          width: 300,
-          child: Column(
-              mainAxisAlignment:MainAxisAlignment.center,
-            children: [
-              Text('Dashboard',style: TextStyle(fontSize: 25),),
-              SizedBox(height: 11),
-              TextField(
-                controller: nameController,
-              ),
-          ElevatedButton(onPressed: (){
-            Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => IntroPage(nameController.text.toString()),));
-          }, child: Text('Next'))
-            ],
-          ),
-        ),
+      body:ListWheelScrollView(
+        children: arr.map((value) => Container(
+          width: double.infinity,
+          color: Colors.blueAccent,
+        )).toList(),
+        itemExtent: 100,
       )
 
     );
   }
 
 }
+
+
+//Center(
+//         child: Container
+//           (
+//           width: 300,
+//           child: Column(
+//               mainAxisAlignment:MainAxisAlignment.center,
+//             children: [
+//               Text('Dashboard',style: TextStyle(fontSize: 25),),
+//               SizedBox(height: 11),
+//               TextField(
+//                 controller: nameController,
+//               ),
+//           ElevatedButton(onPressed: (){
+//             Navigator.pushReplacement(context,
+//                 MaterialPageRoute(builder: (context) => IntroPage(nameController.text.toString()),));
+//           }, child: Text('Next'))
+//             ],
+//           ),
+//         ),
+//       )
 
 
 //Text('Flutter Container'),
