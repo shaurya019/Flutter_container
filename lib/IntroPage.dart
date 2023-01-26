@@ -4,6 +4,8 @@ import 'main.dart';
 import 'package:container/main.dart';
 
 class IntroPage extends StatelessWidget {
+  var name;
+  IntroPage(this.name);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +14,7 @@ class IntroPage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text('Welcome', style: TextStyle(
+            Text('Welcome $name', style: TextStyle(
                 fontSize: 34,
                 fontWeight: FontWeight.bold
             ),),

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue,
         ),
-        home: IntroPage(),
+        home: MyHomePage(),
         // home: const MyHomePage(title: 'Flutter Demo Home Page')
     );
   }
@@ -52,7 +52,7 @@ var nameController = TextEditingController();
               ),
           ElevatedButton(onPressed: (){
             Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => IntroPage(),));
+                MaterialPageRoute(builder: (context) => IntroPage(nameController.text.toString()),));
           }, child: Text('Next'))
             ],
           ),
