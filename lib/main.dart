@@ -26,62 +26,106 @@ class MyApp extends StatelessWidget {
             subtitle1:TextStyle(fontSize: 15,fontWeight: FontWeight.w600),
         )
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page')
+      home: MyHomePage()
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({super.key, required this.title});
+//
+//   final String title;
+//
+//   @override
+//   State<MyHomePage> createState() => _MyHomePageState();
+// }
 
-  final String title;
 
+//class _MyHomePageState extends State<MyHomePage> {
+//   int _counter = 0;
+// void help(){
+//   print('Clicked!!');
+// }
+//   void _incrementCounter() {
+//     setState(() {
+//       _counter++;
+//     });
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//
+//     var arr = ['s' ,'h' ,'a' , 'u' , 'r', 'y', 'a'];
+//
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Flutter Container'),
+//       ),
+//         body:
+//
+//         );
+//   }
+// }
+
+
+class MyHomePage extends StatefulWidget{
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-void help(){
-  print('Clicked!!');
-}
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  State<StatefulWidget> createState() {
+return MyHomeState();
   }
 
+}
+
+class MyHomeState extends State<MyHomePage>{
+  var count=0;
   @override
   Widget build(BuildContext context) {
-
-    var arr = ['s' ,'h' ,'a' , 'u' , 'r', 'y', 'a'];
-
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter Container'),
-      ),
-        body:Container(
-          width: 300,
-          height: 500,
-          color: Colors.cyan,
-          child: Stack
-            (
-            children: [
-              Positioned(
-              bottom: 41,
-              right: 41,
-              child: Container(
-                width: 100,
-                height: 100,
-                color: Colors.red,
-          ))
-            ],
-          ),
-        )
+        appBar: AppBar(
+          title: Text('StateFul'),
+        ),
+        body:
 
-        );
+    );
   }
+
 }
+
+
+
+//Center(
+//           child: Column(
+//            children:[
+//              Text('Count:$count'),
+//              ElevatedButton(onPressed: (){
+//                setState(() {
+//                  count++;
+//                  print(count);
+//                });
+//              }, child: Text('Incremented'))
+//            ]
+//           ),
+//         )
+
+//Container(
+//           width: 300,
+//           height: 500,
+//           color: Colors.cyan,
+//           child: Stack
+//             (
+//             children: [
+//               Positioned(
+//               bottom: 41,
+//               right: 41,
+//               child: Container(
+//                 width: 100,
+//                 height: 100,
+//                 color: Colors.red,
+//           ))
+//             ],
+//           ),
+//         )
+
 
 
 // Center(
