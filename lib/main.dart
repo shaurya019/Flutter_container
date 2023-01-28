@@ -32,25 +32,96 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget{
 // var nameController = TextEditingController();
-var arr = [1,2,3,4,5,6,];
+// var arr = [1,2,3,4,5,6,];
+var arrData = [
+  {
+    'name' : 'Shaurya',
+    'mobile' : '1',
+    'age' : '1',
+  },
+  {
+    'name' : 'Shaurya',
+    'mobile' : '1',
+    'age' : '1',
+  },
+  {
+    'name' : 'Shaurya',
+    'mobile' : '1',
+    'age' : '1',
+  },
+  {
+    'name' : 'Shaurya',
+    'mobile' : '1',
+    'age' : '1',
+  },
+  {
+    'name' : 'Shaurya',
+    'mobile' : '1',
+    'age' : '1',
+  },
+  {
+    'name' : 'Shaurya',
+    'mobile' : '1',
+    'age' : '1',
+  },
+  {
+    'name' : 'Shaurya',
+    'mobile' : '1',
+    'age' : '1',
+  },
+  {
+    'name' : 'Shaurya',
+    'mobile' : '1',
+    'age' : '1',
+  },
+];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Container'),
       ),
-      body:ListWheelScrollView(
-        children: arr.map((value) => Container(
-          width: double.infinity,
-          color: Colors.blueAccent,
-        )).toList(),
-        itemExtent: 100,
-      )
-
+      body:Container(
+        child:ListView(
+          children: arrData.map((value)=>
+            ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text(value['name'].toString()),
+              subtitle: Text(value['mobile'].toString()),
+              trailing: CircleAvatar(
+                radius: 12,
+                backgroundColor: Colors.indigo,
+                child:Text(value['age'].toString())
+              )
+            )
+          ).toList()
+        ),
+      ),
     );
   }
 
 }
+
+//return Padding(padding: const EdgeInsets.all(8.0),
+//             child: Container(
+//               decoration: BoxDecoration(
+//                 borderRadius: BorderRadius.circular(21),
+//                 color: Colors.blue.shade100,
+//               ),
+//                 child:Padding(padding: const EdgeInsets.all(8.0),
+//                     child:Center(child:Text(value)),
+//                 ),
+//             ),
+//             );
+
+
+//ListWheelScrollView(
+//         children: arr.map((value) => Container(
+//           width: double.infinity,
+//           color: Colors.blueAccent,
+//         )).toList(),
+//         itemExtent: 100,
+//       )
 
 
 //Center(
